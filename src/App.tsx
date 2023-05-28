@@ -1,8 +1,8 @@
 import { useQuery } from 'react-query'
 import './App.css'
 
-const fetchUser = (username: string) => {
-  return fetch(`https://api.github.com/users/${username}`).then((res) =>
+const fetchUser = async (username: string) => {
+  return await fetch(`https://api.github.com/users/${username}`).then((res) =>
     res.json()
   )
 }
